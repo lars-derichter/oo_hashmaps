@@ -57,9 +57,22 @@ public class Coderen {
         secretMap.put(' ', 0);
         secretMap.put('.', 27);
     }
+
+    /**
+     * Method printSleutel
+     *
+     * Tekens en bijbehorende codes worden samen op scherm getoond
+     *
+     */
+    public void printSleutel() {
+        for (char teken : secretMap.keySet()) {
+            int code = secretMap.get(teken);
+            System.out.println(teken + "  " + code);
+        }
+    }
+
     /* * Voorbeeld: boodschap " Er was eens ... " wordt in code "5 18 0 23 1 19 0
      * 5 5 14 19 0 27 27 27"*/
-
     public String codeerBoodschap(String boodschap) {
         boodschap = boodschap.trim().toUpperCase();
         String gecodeerdeBoodschap = "";
@@ -110,19 +123,6 @@ public class Coderen {
         }
         return gedecodeerdeBoodschap;
 
-    }
-
-    /**
-     * Method printSleutel
-     *
-     * Tekens en bijbehorende codes worden samen op scherm getoond
-     *
-     */
-    public void printSleutel() {
-        for (char teken : secretMap.keySet()) {
-            int code = secretMap.get(teken);
-            System.out.println(teken + "  " + code);
-        }
     }
 
 }
