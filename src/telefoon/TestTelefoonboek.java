@@ -1,3 +1,5 @@
+package telefoon;
+
 public class TestTelefoonboek {
     public static void main(String[] args) {
         Telefoonboek telefoonboek = new Telefoonboek();
